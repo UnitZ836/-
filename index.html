@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Праздник.яр — Агрегатор детских праздников</title>
     <style>
-        /* Базовые настройки и обнуление стилей */
+        /* Базовые настройки и переменные */
         :root {
             --purple-gradient: linear-gradient(to left, #9d4edd, #4a00e0);
             --main-purple: #6a00f4;
@@ -24,7 +24,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
@@ -280,7 +280,7 @@
         .card-image-wrapper {
             position: relative;
             padding-top: 56.25%; /* Пропорции 16:9 */
-            background-color: #ddd;
+            background-color: #e9ecef;
         }
 
         .card-image {
@@ -302,6 +302,7 @@
             font-size: 12px;
             font-weight: 700;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 10;
         }
 
         .badge.recommend {
@@ -368,13 +369,10 @@
             color: #fff;
         }
 
-        /* Адаптивность для мобильных экранов */
+        /* Адаптивность под мобильные устройства */
         @media (max-width: 992px) {
             .main-container {
                 grid-template-columns: 1fr;
-            }
-            .cards-grid {
-                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -395,3 +393,5 @@
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">
+                <!-- Минималистичный SVG логотип-хлопушка -->
+                <div class="logo-icon">
